@@ -21,3 +21,7 @@
 
 * See a real example mixing up everything we have learned
 * Get a general idea about how css works in a production environment
+
+# Bonus
+
+https://docs.emmet.io/abbreviations/syntax/
