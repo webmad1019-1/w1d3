@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <style>
+      * {
+        font-family: "Raleway", sans-serif;
+      }
 
-	<style>
-		* {
-			font-family: 'Raleway', sans-serif;
-		}
+      html {
+        font-size: 10px;
+      }
 
-		html {
-			font-size: 10px;
-		}
+      .example {
+        border: 1px solid black;
+        padding: 1rem;
+        margin: 2rem;
+        font-size: 2.5rem;
+      }
 
-		.example {
-			border: 1px solid black;
-			padding: 1rem;
-			margin: 2rem;
-			font-size: 2.5rem;
-		}
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+        text-decoration: underline;
+      }
 
-		header {
-			text-align: center;
-			margin-bottom: 2rem;
-			text-decoration: underline;
-		}
-
-		/* 
+      /* 
 		EXAMPLE 1
 		
 		There are four different combinators in CSS3:
@@ -42,25 +44,26 @@
 
 		*/
 
-		.example1 div p.some_class {
-			color: green;
-		}
+      .example1 div p.some_class {
+        color: green;
+      }
 
-		.example1 div p.some_class:before {
-			content: "> ";
-		}
+      .example1 div p.some_class:before {
+        content: "> ";
+      }
 
-		.example1 div>p.some_class {
-			color: red;
-		}
+      .example1 div > p.some_class {
+        color: red;
+      }
 
-		.example1 div>p.some_class:before {
-			content: "";
-		}
+      .example1 div > p.some_class:before {
+        content: "";
+      }
 
-
-		/* 
+      /* 
 		EXAMPLE 2
+
+		.example a[href=www.google.com]
 		
 		[attribute]	All elements with the specified attribute
 		[attribute=value]	All elements where the specified attribute is equal to ‘value’
@@ -71,87 +74,129 @@
 		[attribute*=value]	All elements with an attribute containing the substring ‘value’ 
 		*/
 
-		.example2 a[href*="ironhack"] {
-			color: green;
-			background: url(img/logo.png) no-repeat left center;
-			background-size: contain;
-			text-indent: 5.5rem;
-		}
+      .example2 a[href="http://www.ironhack.com"] {
+        color: green;
+        background: url(img/logo2.png) no-repeat;
+        background-size: contain;
+        text-indent: 3rem;
+      }
 
-		.example2 a {
-			display: block;
-		}
+      .example2 a {
+        display: block;
+      }
 
-		/* 
+      /* 
 		EXAMPLE 3
 		
 		Combinator with ,
 		*/
 
-		.example3 h1,
-		.example3 h2 {
-			color: red;
-		}
+      .example3 h1,
+      .example3 h2 {
+        color: red;
+      }
 
-		/* 
+      /* 
 		EXAMPLE 4
 		
 		Adjacent + operator
 		*/
 
-		.example4 div {
-			background-color: green;
-		}
+      .example4 div {
+        background-color: green;
+      }
 
-		.example4 #former {
-			background-color: red;
-		}
+      .example4 #former {
+        background-color: red;
+      }
 
-		.example4 #former+div {
-			background-color: yellow;
-		}
-	</style>
-</head>
+      .example4 #former + div {
+        background-color: yellow;
+      }
+    </style>
+  </head>
 
-<body>
-	<section class="example example1">
-		<header>Example 1 - Direct descendant combinator</header>
-		<div>
-			<p class="some_class">Selected with descendant</p> <!-- Selected [1] -->
-			<blockquote>
-				<p class="some_class">Not selected</p> <!-- Not selected [2] -->
-			</blockquote>
-		</div>
-	</section>
+  <body>
+    <ul class="items">
+      <li class="item item-1">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-2">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-3">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-4">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-5">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-6">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-7">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-8">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-9">hola!! qué buen tiempo hace hoy!</li>
+      <li class="item item-10">hola!! qué buen tiempo hace hoy!</li>
+    </ul>
 
-	<section class="example example2">
-		<header>Example 2 - Attribute selector</header>
+    <style>
+      .items {
+        font-size: 40px;
+      }
 
-		<a href="https://www.google.com">Google</a>
-		<a href="http://www.ironhack.com">IronHack</a>
-		<a href="http://www.ubuntu.org">Ubuntu</a>
-		<a href="https://en.wikipedia.org/wiki/hacker">Wikipedia</a>
-		<a href="http://www.ironhack.com/test">Test IronHack</a>
-	</section>
+      .items .item:nth-child(3n) {
+        background: red;
+      }
+      /* 
+      .items li:last-child,
+      .item-7 {
+        background: yellow;
+		font-size:10px;
+      } */
+    </style>
 
-	<section class="example example3">
-		<header>Example 3 - Comma combinator</header>
+    <script>
+      Array(100)
+        .fill()
+        .forEach(x => {
+          var newLIDOMEl = document.createElement("li");
+          newLIDOMEl.innerHTML = "buenos dias";
+          newLIDOMEl.className = "item";
+          document.querySelector(".items").appendChild(newLIDOMEl);
+        });
+    </script>
 
-		<h1>Example 3 - h1 (both selected)</h1>
-		<h2>Example 3 - h2 (both selected)</h2>
-	</section>
+    <section class="example example1">
+      <header>Example 1 - Direct descendant combinator</header>
+      <div>
+        <p class="some_class">Selected with descendant</p>
+        <!-- Selected [1] -->
+        <blockquote>
+          <p class="some_class">Not selected</p>
+          <!-- Not selected [2] -->
+        </blockquote>
+      </div>
+    </section>
 
-	<section class="example example4">
-		<header>Example 4 - Adjacent selector</header>
+    <section class="example example2">
+      <header>Example 2 - Attribute selector</header>
 
-		<div>
-			<div>before FORMER</div>
-			<div>before FORMER</div>
-			<div id="former">#former</div>
-			<div>next to FORMER</div>
-			<div>last one...</div>
-		</div>
-	</section>
-</body>
+      <a href="https://www.google.com">Google</a>
+      <a href="http://www.ironhack.com">IronHack</a>
+      <a href="http://www.ubuntu.org">Ubuntu</a>
+      <a href="https://en.wikipedia.org/wiki/hacker">Wikipedia</a>
+      <a href="http://www.ironhack.com/test">Test IronHack</a>
+      <a href="http://www.ironhack.com/hola">Hola IronHack</a>
+    </section>
 
+    <section class="example example3">
+      <header>Example 3 - Comma combinator</header>
+
+      <h1>Example 3 - h1 (both selected)</h1>
+      <h2>Example 3 - h2 (both selected)</h2>
+    </section>
+
+    <section class="example example4">
+      <header>Example 4 - Adjacent selector</header>
+
+      <div>
+        <div>before FORMER</div>
+        <div>before FORMER</div>
+        <div id="former">#former</div>
+        <div>next to FORMER</div>
+        <div>last one...</div>
+      </div>
+    </section>
+  </body>
 </html>
