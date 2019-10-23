@@ -135,6 +135,16 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section .cta {
+    margin-bottom: 4rem;
+}
+
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -180,11 +190,18 @@ body {
     max-width: 92rem;
     margin: 0 auto;
     line-height: 7rem;
-    margin-bottom: 11.5rem;
 }
 
 .jumbotron span {
     color: grey;
+}
+
+h2.jumbotron {
+    margin-bottom: 11.5rem;
+}
+
+h3.jumbotron {
+    margin-bottom: 5.5rem;
 }
 
 .low-nav {
@@ -203,27 +220,22 @@ body {
     margin-right: 0;
 }
 
-.grid {
-    display: flex;
-
-    justify-content: space-between;
-    padding: 2rem;
-    align-items: center;
-    flex-direction: column;
+#wrapper {
     max-width: 160rem;
     margin: 0 auto;
 }
 
-
-
-
-.grid li {
-    /* margin-right: 20px;
-    margin-bottom: 20px; */
-    margin-bottom: 1.5rem;
+.grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    flex-direction: column;
 }
 
-
+.grid li {
+    margin-bottom: 1.5rem;
+}
 
 .grid .full,
 .grid .half,
@@ -235,7 +247,6 @@ body {
 .grid li img {
     width: 100%;
 }
-
 
 @media (min-width: 769px) {
     .grid {
@@ -256,5 +267,23 @@ body {
         width: calc(33% - 1rem);
 
     }
+}
 
+.social-icons {
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.social-icons li {
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 11rem;
+    color: grey;
 }
