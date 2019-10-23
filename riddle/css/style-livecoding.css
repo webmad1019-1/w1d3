@@ -248,6 +248,7 @@ h3.jumbotron {
 
 .grid li img {
     width: 100%;
+    display: block;
 }
 
 @media (min-width: 769px) {
