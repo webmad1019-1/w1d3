@@ -1,6 +1,6 @@
 ![alt text](https://github.com/webmad1019-1/day3_advanced-selectors-positioning-full-layout/blob/master/img/logo2.png?raw "")
 
-# Yesterday
+# Yesterday - day w1d2
 
 * Transitions, animations
 * Responsive web design
@@ -9,7 +9,7 @@
 
 +Activities around that with bootstrap and flex
 
-# Today
+# Today - day w1d3
 
 * More on selectors
 * Absolute, relative, static, fixed positioning
